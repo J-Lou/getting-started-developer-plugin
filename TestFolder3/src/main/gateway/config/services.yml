@@ -1,0 +1,10 @@
+TestFolder3/jdbcQuery:
+  url: "/jdbcQuery"
+  policy: "TestFolder3/jdbcQuery"
+  httpMethods:
+  - "DELETE"
+  - "POST"
+  - "GET"
+  - "PUT"
+  properties: {}
+  wssProcessingEnabled: false

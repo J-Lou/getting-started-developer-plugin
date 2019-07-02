@@ -1,0 +1,24 @@
+<wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy" xmlns:L7p="http://www.layer7tech.com/ws/policy">
+    <wsp:All wsp:Usage="Required">
+        <L7p:JdbcQuery>
+            <L7p:ConnectionName stringValue="Mysql"/>
+            <L7p:ConvertVariablesToStrings booleanValue="false"/>
+            <L7p:NamingMap mapValue="included">
+                <L7p:entry>
+                    <L7p:key stringValue="helloworld"/>
+                    <L7p:value stringValue="helloworld"/>
+                </L7p:entry>
+            </L7p:NamingMap>
+            <L7p:SqlQuery stringValue="select * from test.helloworld;"/>
+        </L7p:JdbcQuery>
+        <L7p:HardcodedResponse>
+            <L7p:ResponseBody><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+${jdbcQuery.helloworld}
+</head>
+</html>]]></L7p:ResponseBody>
+            <L7p:ResponseContentType stringValue="text/html; charset=UTF-8"/>
+        </L7p:HardcodedResponse>
+    </wsp:All>
+</wsp:Policy>
