@@ -6,4 +6,4 @@
 
 rootProject.name = 'getting-started-gateway'
 
-include 'deployment', 'TestFolder1', 'TestFolder2', 'TestFolder3'
+include 'deployment', 'TestFolder1', 'TestFolder2'

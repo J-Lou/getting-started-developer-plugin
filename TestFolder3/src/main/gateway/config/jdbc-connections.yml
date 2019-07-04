@@ -1,8 +1,0 @@
-Mysql:
-  driverClass: "com.mysql.jdbc.Driver"
-  jdbcUrl: "jdbc:mysql://mysql-server:3306"
-  properties:
-    EnableCancelTimeout: "true"
-  user: "test"
-  minimumPoolSize: 3
-  maximumPoolSize: 15

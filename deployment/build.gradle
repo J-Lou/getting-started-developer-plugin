@@ -7,5 +7,4 @@
 dependencies {
     bundle project(':TestFolder1')
     bundle project(':TestFolder2')
-    bundle project(':TestFolder3')
 }

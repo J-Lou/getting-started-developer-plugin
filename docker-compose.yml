@@ -22,30 +22,6 @@ services:
       SSG_ADMIN_USERNAME: "admin"
       SSG_ADMIN_PASSWORD: "password"
       ENV.CONTEXT_VARIABLE_PROPERTY.BackgroundEnvironmentService.color: "blue"
-      ENV.JDBC_CONNECTION.Mysql: |-
-              driverClass: com.mysql.jdbc.Driver
-              jdbcUrl: jdbc:mysql://mysql-server:3306
-              user: test
-              password: password
-              minimumPoolSize: 3
-              maximumPoolSize: 15
-              properties:
-                EnableCancelTimeout: 'true'
-    depends_on:
-        - mysql-server
-
-  mysql-server:
-    build:
-      context: .
-      dockerfile: Dockerfile-mysql
-    image: test_mysql:latest
-    ports:
-      - "3306"
-    command:
-      - "--character-set-server=utf8"
-      - "--innodb_log_buffer_size=32M"
-      - "--innodb_log_file_size=80M"
-      - "--max_allowed_packet=8M"
 
 secrets:
   license:
